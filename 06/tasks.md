@@ -10,10 +10,10 @@
 ### Примери
 Очакваните стойности са приблизителни, възможно е леко разминаване при принтирането на екрана.
 ```c
-cel_to_fah(0)          // expected result: 32
-cel_to_fah(-32)        // -25.6
-cel_to_fah(-17.77778)  // 0
-cel_to_fah(36.6)       // 97.88
+cel_to_fah(0);          // expected result: 32
+cel_to_fah(-32);        // -25.6
+cel_to_fah(-17.77778);  // 0
+cel_to_fah(36.6);       // 97.88
 ```
 
 
@@ -26,14 +26,14 @@ cel_to_fah(36.6)       // 97.88
 
 ### Примери
 ```c
-average_odds(-3, -1)    // -2
-average_odds(1, 3)      // 2
-average_odds(2, 2)      // 0
-average_odds(-15, -15)  // -15
-average_odds(5, 10)     // 7
-average_odds(-7, -3)    // -5
-average_odds(-20, 20)   // 0
-average_odds(1, 100)    // 50
+average_odds(-3, -1);    // -2
+average_odds(1, 3);      // 2
+average_odds(2, 2);      // 0
+average_odds(-15, -15);  // -15
+average_odds(5, 10);     // 7
+average_odds(-7, -3);    // -5
+average_odds(-20, 20);   // 0
+average_odds(1, 100);    // 50
 ```
 
 
@@ -48,13 +48,13 @@ average_odds(1, 100)    // 50
 
 ### Примери
 ```c
-calc_binary_op('+', -1, 2)    // 1
-calc_binary_op('-', 1, 2)     // -1
-calc_binary_op('-', 2, 1)     // 1
-calc_binary_op('*', 2, -2)    // -4
-calc_binary_op('/', 25.5, 4)  // 6.375
-calc_binary_op('/', 3.14, 0)  // 0
-calc_binary_op('i', 2, 200)   // 0
+calc_binary_op('+', -1, 2);    // 1
+calc_binary_op('-', 1, 2);     // -1
+calc_binary_op('-', 2, 1);     // 1
+calc_binary_op('*', 2, -2);    // -4
+calc_binary_op('/', 25.5, 4);  // 6.375
+calc_binary_op('/', 3.14, 0);  // 0
+calc_binary_op('i', 2, 200);   // 0
 ```
 
 
@@ -66,9 +66,9 @@ calc_binary_op('i', 2, 200)   // 0
 
 ### Примери
 ```c
-twin_primes(1, 10)    // (3, 5), (5, 7)
-twin_primes(17, 101)  // (17, 19), (29, 31), (41, 43), (59, 61), (71, 73)
-twin_primes(19, 31)   // (29, 31)
+twin_primes(1, 10);    // (3, 5), (5, 7)
+twin_primes(17, 101);  // (17, 19), (29, 31), (41, 43), (59, 61), (71, 73)
+twin_primes(19, 31);   // (29, 31)
 ```
 
 
@@ -92,10 +92,10 @@ twin_primes(19, 31)   // (29, 31)
 ### Примери
 
 ```c
-leibniz_pi(1)         // 4.000000
-leibniz_pi(10)        // 3.041840
-leibniz_pi(100)       // 3.131593
-leibniz_pi(1000)      // 3.140593
-leibniz_pi(10000)     // 3.141493
-leibniz_pi(100000)    // 3.141583
-leibniz_pi(1000000)   // 3.141592
+leibniz_pi(1);         // 4.000000
+leibniz_pi(10);        // 3.041840
+leibniz_pi(100);       // 3.131593
+leibniz_pi(1000);      // 3.140593
+leibniz_pi(10000);     // 3.141493
+leibniz_pi(100000);    // 3.141583
+leibniz_pi(1000000);   // 3.141592
