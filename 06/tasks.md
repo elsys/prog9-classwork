@@ -29,7 +29,7 @@ cel_to_fah(36.6);       // 97.88
 average_odds(-3, -1);    // -2
 average_odds(1, 3);      // 2
 average_odds(2, 2);      // 0
-average_odds(-15, -15);  // -15
+average_odds(-15, -15);  // 0
 average_odds(5, 10);     // 7
 average_odds(-7, -3);    // -5
 average_odds(-20, 20);   // 0
