@@ -7,15 +7,15 @@
 
 ### Пример
 ```c
-printf("%d\n", double_up()); // 1
-printf("%d\n", double_up()); // 2
-printf("%d\n", double_up()); // 4
+printf("%d\n", double_up());  // 1
+printf("%d\n", double_up());  // 2
+printf("%d\n", double_up());  // 4
 
 for(int i = 0; i < 9; i++) {
     double_up(); // no output expected
 }
 
-printf("%d\n", double_up()); // 8192
+printf("%d\n", double_up());  // 8192
 ```
 
 
@@ -24,44 +24,122 @@ printf("%d\n", double_up()); // 8192
 
 ### Пример
 ```c
-printf("%d\n", double_up() == double_up_static()); // 1
-printf("%d\n", double_up() == double_up_static()); // 1
-printf("%d\n", double_up() == double_up_static()); // 1
+printf("%d\n", double_up() == double_up_static());  // 1
+printf("%d\n", double_up() == double_up_static());  // 1
+printf("%d\n", double_up() == double_up_static());  // 1
 
 for(int i = 0; i < 9; i++) {
     double_up(); // no output expected
     double_up_static(); // no output expected aswell
 }
 
-printf("%d\n", double_up() == double_up_static()); // 1
+printf("%d\n", double_up() == double_up_static());  // 1
 ```
 
 
 ## Задача 3
-Дефинирайте функцията `is_squared` която приема като аргумент едно цяло число и _връща_ 1 ако това число е точен квадрат на някое друго число или 0 ако не е. Подберете подходящи типове за параметъра и резултата на функцията.
+Дефинирайте функцията `is_perfect_square` която приема като аргумент едно цяло число и _връща_ 1 ако това число е точен квадрат на някое друго число или 0 ако не е. Подберете подходящи типове за параметъра и резултата на функцията.
 
 Демонстрирайте коректността на функцията в главната функция на програмата със следния пример.
 
 ## Пример
 ```c
-if(is_square(4)) {
-    printf("4 is a square number!"); // should go in here
+if(is_perfect_square(4)) {
+    printf("4 is a perfect square number!");  // should go in here
     printf("2 * 2 = 4");
 } else {
-    printf("4 is not a square number!");
+    printf("4 is not a square number!");  // should not get printed
 }
 
-is_square(0);  // expected 1
-is_square(-5); // 0
-is_square(1);  // 1
-is_square(2);  // 0
-is_square(9);  // 1
-is_square(1048576); // 1
+is_perfect_square(0);        // expected 1
+is_perfect_square(-5);       // 0
+is_perfect_square(1);        // 1
+is_perfect_square(2);        // 0
+is_perfect_square(9);        // 1
+is_perfect_square(1048576);  // 1
 ```
 
 
+## Задача 4
+Дефинирайте функцията `alter_case` която приема една буква като параметър и я променя и връща като резултат. Подберете подходящи типове за параметрите и върнатата стойност.
+
+Промяната зависи от броя на извикване на функцията, като при всяко нечетно извикване функцията връща буквата като малка буква, а при четните - като главна.
+
+Ако функцията е извикана със символ който не е буква, тя го връща непроменен.
+
+Демонстрирайте коректността на функцията в главната функция на програмата със следния пример.
+
+
+### Пример
+```c
+printf("%c", alter_case('a'));  // a
+printf("%c", alter_case('a'));  // A
+printf("%c", alter_case('a'));  // a
+printf("%c", alter_case('B'));  // B
+printf("%c", alter_case('B'));  // b
+printf("%c", alter_case('1'));  // 1
+printf("%c", alter_case('B'));  // b
+```
+
+### Подсказка
+Можете да проверите дали един символ е малка буква с израза `c >= 'a' && c <= 'z'`, където `c` е променливата в която е записан един символ.
+
+## Задача 5
+Дефинирайте функцията `void pandemic_simulation(unsigned int initial_infected, float growth_per_iteration, float decay_per_iteration)` която пресмята разпространението на заболяване в населението.
+
+Функцията прави това като итерира и увеличава броя заболели докато все още има разпространение на болестта. (погледнете примерът за да придобиете по-добра представа за какво прави функцията).
+
+Параметрите на функцията са:
+- Параметърът `initial_infected` е първоначалния брой болни.
+- Параметърът `growth_per_iteration` показва с колко ще се увеличи бройката на заболели спрямо предишната итерация като коефициент. При `growth_per_iteration` със стойност 0.5 ако на предишната итерация е имало 200 заболели, то при следващата ще са 300 (или с 50% повече).
+- Параметърът `decay_per_iteration` показва с колко се намалява `growth_per_iteration` след всяка итерация, като абсолютна стойност. При `growth_per_iteration` със сстойност 0.1 и `growth_per_iteration` с нчалана стойност 0.5 след първата итерация `growth_per_iteration` ще има стойност 0.4.
+
+Функцията трябва да принтира на екрана обшия броя заболели на всяка итерация, заедно с текущия `growth_per_iteration`, като първоначално трябва да се изпринтира информация за итерация 0 (с непроменени подадените параметри).
+След итерацията с номер 9 функцията да приключи изпълнението си.
+
+### Примери
+```c
+pandemic_simulation(100, 0.5, 0.1);
+// expected output
+// Iteration 0: 100 (0.500000)
+// Iteration 1: 150 (0.400000)
+// Iteration 2: 210 (0.300000)
+// Iteration 3: 273 (0.200000)
+// Iteration 4: 327 (0.100000)
+// Iteration 5: 359 (0.000000)
+```
+Принтирането на последната итерация от горния пример не е задължителна, не се притеснявайте ако я няма при вас. Тя може да се получи защото `growth_per_iteration` не е точно 0, но е много близко до нулата число.
+
+```c
+pandemic_simulation(1000, 0.5, 0.05);
+// Iteration 0: 1000 (0.450000)
+// Iteration 1: 1450 (0.400000)
+// Iteration 2: 2030 (0.350000)
+// Iteration 3: 2740 (0.300000)
+// Iteration 4: 3562 (0.250000)
+// Iteration 5: 4452 (0.200000)
+// Iteration 6: 5342 (0.150000)
+// Iteration 7: 6143 (0.100000)
+// Iteration 8: 6757 (0.050000)
+```
+
+```c
+pandemic_simulation(1000, 0.5, -0.03);
+// Iteration 0: 1000 (0.500000)
+// Iteration 1: 1500 (0.530000)
+// Iteration 2: 2295 (0.560000)
+// Iteration 3: 3580 (0.590000)
+// Iteration 4: 5692 (0.620000)
+// Iteration 5: 9221 (0.650000)
+// Iteration 6: 15214 (0.680000)
+// Iteration 7: 25559 (0.710000)
+// Iteration 8: 43705 (0.740000)
+// Iteration 9: 76046 (0.770000)
+// <ended after 10 interations>
+```
+
 ## Задача 6
-Дефинирайте функцията `queen_can_move(char letter, int pos)` която изпринтира на екрана всички възможни полета на които може да се премести шахматна царица поставена върху полето на позиция `<letter><pos>`. Входната позиция, както и очаквания изход, използват [шахматната нотация](https://bg.wikipedia.org/wiki/%D0%A8%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D0%BD%D0%B0_%D0%BD%D0%BE%D1%82%D0%B0%D1%86%D0%B8%D1%8F).
+Дефинирайте функцията `void queen_move_positions(char letter, int pos)` която изпринтира на екрана всички възможни полета на които може да се премести шахматна царица поставена върху полето на позиция `<letter><pos>`. Входната позиция, както и очаквания изход, използват [шахматната нотация](https://bg.wikipedia.org/wiki/%D0%A8%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D0%BD%D0%B0_%D0%BD%D0%BE%D1%82%D0%B0%D1%86%D0%B8%D1%8F).
 
 ![Chessboard notation](https://upload.wikimedia.org/wikipedia/commons/1/11/SCD_algebraic_notation.png)
 
@@ -71,15 +149,15 @@ is_square(1048576); // 1
 
 Реда на принтиране на възможните позиции няма значение.
 
-## Пример
+## Примери
 ```c
-queen_can_move('h', 9);
+queen_move_positions('h', 9);
 // expected output:
 // g8 f8 e8 d8 c8 b8 a8 h7 h6 h5 h4 h3 h2 h1 g7 f6 e5 d4 c3 b2 a1
 ```
 
 ```c
-queen_can_move('g', 2);
+queen_move_positions('g', 2);
 // expected output:
 // f2 e2 d2 c2 b2 a2 g3 g4 g5 g6 g7 g8 h2 g1 f3 e4 d5 c6 b7 a8 h3 h1 f1
 ```
