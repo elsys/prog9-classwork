@@ -11,7 +11,7 @@
 
 ## Примери
 ```c
-queen_move_positions('h', 9);
+queen_move_positions('h', 8);
 // expected output:
 // g8 f8 e8 d8 c8 b8 a8 h7 h6 h5 h4 h3 h2 h1 g7 f6 e5 d4 c3 b2 a1
 ```
