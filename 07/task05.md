@@ -49,5 +49,5 @@ pandemic_simulation(1000, 0.5, -0.03);
 // Iteration 7: 25559 (0.710000)
 // Iteration 8: 43705 (0.740000)
 // Iteration 9: 76046 (0.770000)
-// <ended after 10 interations>
+// <ended after 10 iterations>
 ```
