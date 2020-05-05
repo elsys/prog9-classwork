@@ -23,6 +23,6 @@ int b_size = sizeof(b)/sizeof(b[0]);
 printf("%d\n", pop(b, b_size)); // 400
 printf("%d\n", pop(b, b_size)); // 200
 printf("%d\n", pop(b, b_size)); // -100
-printf("%d\n", a[4]); // -500
-printf("%d\n", a[2]); // -300
+printf("%d\n", b[4]); // -500
+printf("%d\n", b[2]); // -300
 ```
