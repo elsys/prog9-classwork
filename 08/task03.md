@@ -1,25 +1,25 @@
 Напишете функция `at`, която получава
-- указател към началото на масив
-- указател към последният елемент на масив +1
+- указател към началото на масив от тип int
+- големината на масива
 - позицията на елемента, който да върне
 и връща елемента на определена позиция.
 
 Ако получи отрицателно число за позиция да върне елемента отзад напред.
 
-Ако получи елемент число ходещо извън рамките на масива да се завърти отново.
+Ако получи число ходещо извън рамките на масива да се завърти отново.
 
 Пример:
 
 ```
-int array[] = {10, 20, 30, 40}
-int *end = &(array[4]);
+int array[] = {10, 20, 30, 40};
+int a_size = sizeof(a)/sizeof(a[0]);
 
-printf("%d", at(array, end, 0)); // 10
-printf("%d", at(array, end, 1)); // 20
-printf("%d", at(array, end, -1)); // 40
-printf("%d", at(array, end, -2)); // 30
-printf("%d", at(array, end, 4)); // 10
-printf("%d", at(array, end, 5)); // 20
-printf("%d", at(array, end, -5)); // 40
-printf("%d", at(array, end, -6)); // 30
+printf("%d", at(array, a_size, 0)); // 10
+printf("%d", at(array, a_size, 1)); // 20
+printf("%d", at(array, a_size, -1)); // 40
+printf("%d", at(array, a_size, -2)); // 30
+printf("%d", at(array, a_size, 4)); // 10
+printf("%d", at(array, a_size, 5)); // 20
+printf("%d", at(array, a_size, -5)); // 40
+printf("%d", at(array, a_size, -6)); // 30
 ```
