@@ -14,12 +14,12 @@
 int array[] = {10, 20, 30, 40};
 int a_size = sizeof(a)/sizeof(a[0]);
 
-printf("%d", at(array, a_size, 0)); // 10
-printf("%d", at(array, a_size, 1)); // 20
-printf("%d", at(array, a_size, -1)); // 40
-printf("%d", at(array, a_size, -2)); // 30
-printf("%d", at(array, a_size, 4)); // 10
-printf("%d", at(array, a_size, 5)); // 20
-printf("%d", at(array, a_size, -5)); // 40
-printf("%d", at(array, a_size, -6)); // 30
+printf("%d\n", at(array, a_size, 0)); // 10
+printf("%d\n", at(array, a_size, 1)); // 20
+printf("%d\n", at(array, a_size, -1)); // 40
+printf("%d\n", at(array, a_size, -2)); // 30
+printf("%d\n", at(array, a_size, 4)); // 10
+printf("%d\n", at(array, a_size, 5)); // 20
+printf("%d\n", at(array, a_size, -5)); // 40
+printf("%d\n", at(array, a_size, -6)); // 30
 ```
