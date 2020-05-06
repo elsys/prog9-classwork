@@ -14,12 +14,12 @@
 double array[] = {10.5, 20.5, 30.5, 40.5};
 double *end = &(array[4]);
 
-printf("%d", at(array, end, 0)); // 10.5
-printf("%d", at(array, end, 1)); // 20.5
-printf("%d", at(array, end, -1)); // 40.5
-printf("%d", at(array, end, -2)); // 30.5
-printf("%d", at(array, end, 4)); // 10.5
-printf("%d", at(array, end, 5)); // 20.5
-printf("%d", at(array, end, -5)); // 40.5
-printf("%d", at(array, end, -6)); // 30.5
+printf("%f", at(array, end, 0)); // 10.5
+printf("%f", at(array, end, 1)); // 20.5
+printf("%f", at(array, end, -1)); // 40.5
+printf("%f", at(array, end, -2)); // 30.5
+printf("%f", at(array, end, 4)); // 10.5
+printf("%f", at(array, end, 5)); // 20.5
+printf("%f", at(array, end, -5)); // 40.5
+printf("%f", at(array, end, -6)); // 30.5
 ```
